@@ -5,7 +5,7 @@ chai.should()
 const expect = chai.expect
 const assert = chai.assert
 
-const api = supertest('http://api:3000')
+const api = supertest(process.env.API_BASE_URI || 'http://api:3000')
 
 describe('HSTS', function(){
   var response

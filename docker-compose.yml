@@ -11,3 +11,5 @@ tests:
     - api
   volumes:
     - "./tests/test:/app/test"
+  environment:
+    - API_BASE_URI=api:3000
