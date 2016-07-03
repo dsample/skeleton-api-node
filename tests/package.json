@@ -10,8 +10,8 @@
     "url": "http://sample.me.uk/blog"
   },
   "scripts": {
-    "start": "mocha --opts .mocha -w",
     "test": "mocha --opts .mocha",
+    "watch": "mocha --opts .mocha -w",
     "lint": "eslint"
   },
   "repository": "dsample/skeleton-api-node",
