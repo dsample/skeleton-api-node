@@ -1,8 +1,13 @@
 var express = require('express')
 var app = express()
+var helmet = require('helmet')
+var cors = require('cors')
 
 const port = process.env.PORT || 3000
 const whitelistedOriginDomains = ['example.com', 'example.org']
+
+// Security: Remove server powered-by header
+app.disable('x-powered-by');
 
 // Security: CORS
 function checkOriginWhitelist(origin, callback) {
