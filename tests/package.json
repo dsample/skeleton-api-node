@@ -12,7 +12,7 @@
   "scripts": {
     "test": "mocha --opts .mocha",
     "watch": "mocha --opts .mocha -w",
-    "lint": "eslint"
+    "lint": "eslint ./"
   },
   "repository": "dsample/skeleton-api-node",
   "bugs": {

@@ -1,12 +1,11 @@
 const chai = require('chai')
-const supertest = require('supertest');
+const supertest = require('supertest')
 const expect = chai.expect
 const api = supertest(process.env.API_BASE_URI || 'http://api:3000')
 
 describe('CORS', function(){
   describe('From a valid origin', function() {
     var response
-    var error
 
     before(function(done){
       api.options('/')
@@ -15,7 +14,6 @@ describe('CORS', function(){
         .set('Access-Control-Request-Method', 'GET')
         .set('Access-Control-Request-Headers', 'Foo')
         .end(function(err, res){
-          error = err
           response = res
           done()
         })

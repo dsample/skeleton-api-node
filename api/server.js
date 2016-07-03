@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 const whitelistedOriginDomains = ['example.com', 'example.org']
 
 // Security: Remove server powered-by header
-app.disable('x-powered-by');
+app.disable('x-powered-by')
 
 // Security: HSTS
 // Remove if not running on HTTPS
@@ -23,7 +23,7 @@ app.use(helmet.hsts({
 app.use(cors({
   origin: corsWithSubdomains(whitelistedOriginDomains),
   // Headers you want to allow JavaScript to read
-  exposeHeaders: ["Date", "Location"],
+  exposeHeaders: ['Date', 'Location'],
   credentials: true,
   maxAge: 600,
   preflightContinue: false

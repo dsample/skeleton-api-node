@@ -4,7 +4,7 @@ module.exports = function corsWithSubdomains(allowedOriginDomains) {
   }
 
   return function(origin, callback) {
-    var originIsWhitelisted = allowedOriginDomains.some(x => ("." + origin).endsWith(x))
-    callback(null, originIsWhitelisted);
+    var originIsWhitelisted = allowedOriginDomains.some(x => ('.' + origin).endsWith(x))
+    callback(null, originIsWhitelisted)
   }
 }
