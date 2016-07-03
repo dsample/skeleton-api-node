@@ -1,0 +1,13 @@
+api:
+  build: ./api
+  environment:
+    - NODE_ENV=production
+  ports:
+    - "3000"
+
+tests:
+  build: ./tests
+  links:
+    - api
+  volumes:
+    - "./tests/test:/app/test"

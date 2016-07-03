@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "license": "ISC",
+  "name": "api",
+  "version": "1.0.0",
+  "description": "A hello world API",
+  "author": {
+    "name": "Duncan Sample",
+    "email": "examples@antimatters.co.uk",
+    "url": "http://sample.me.uk/blog"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha",
+    "lint": "eslint"
+  },
+  "repository": "dsample/skeleton-api-node",
+  "bugs": {
+    "url": "https://github.com/dsample/skeleton-api-node/issues"
+  },
+  "homepage": "https://github.com/dsample/skeleton-api-node",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
