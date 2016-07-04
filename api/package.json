@@ -14,7 +14,8 @@
     "start": "node server.js",
     "test": "mocha",
     "lint": "eslint ./",
-    "watch": "npm install nodemon && node_modules/nodemon/bin/nodemon.js server.js"
+    "watch": "npm install nodemon && node_modules/nodemon/bin/nodemon.js server.js",
+    "check_security": "npm install nsp && node_modules/nsp/bin/nsp check"
   },
   "repository": "dsample/skeleton-api-node",
   "bugs": {
