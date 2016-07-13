@@ -14,8 +14,8 @@
     "start": "node server.js",
     "test": "snyk test && mocha",
     "lint": "eslint ./",
-    "watch": "npm install nodemon && node_modules/nodemon/bin/nodemon.js server.js",
-    "check_security": "npm install nsp && node_modules/nsp/bin/nsp check",
+    "watch": "nodemon -L server.js",
+    "nsp_protect": "nsp check",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -30,6 +30,8 @@
     "helmet": "^2.1.1"
   },
   "devDependencies": {
+    "nodemon": "^1.9.2",
+    "nsp": "^2.6.0",
     "snyk": "^1.16.0"
   },
   "snyk": true
