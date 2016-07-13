@@ -4,6 +4,9 @@ var helmet = require('helmet')
 var cors = require('cors')
 var corsWithSubdomains = require('./lib/corsWithSubdomains')
 
+// // Uncomment if using Mongo
+// var db = require('./lib/db')
+
 const port = process.env.PORT || 3000
 const whitelistedOriginDomains = ['example.com', 'example.org']
 
@@ -33,6 +36,14 @@ app.get('/', function (req, res) {
   res.send('Hello World!')
 })
 
-app.listen(port, function () {
-  console.log('Example app listening on port 3000!')
-})
+// // Uncomment if using Mongo in order to share the connection
+// db.connect(process.env.MONGODB_URL, function(err) {
+//   if (err) {
+//     console.log('Unable to connect to Mongo')
+//     process.exit(1)
+//   }
+//
+  app.listen(port, function () {
+    console.log('Example app listening on port ' + port + '!')
+  })
+// })
