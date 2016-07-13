@@ -5,9 +5,13 @@ var app = express()
 var helmet = require('helmet')
 var cors = require('cors')
 var corsWithSubdomains = require('./lib/corsWithSubdomains')
+var bodyParser = require('body-parser')
 
 // // Uncomment if using Mongo
 // var db = require('./lib/db')
+
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 const port = process.env.PORT || 3000
 const whitelistedOriginDomains = ['example.com', 'example.org']
