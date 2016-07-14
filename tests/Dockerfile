@@ -11,4 +11,4 @@ ADD . /app
 EXPOSE 3000
 
 ENTRYPOINT [ "npm", "run" ]
-CMD [ "watch" ]
+CMD [ "test" ]
