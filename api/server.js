@@ -4,6 +4,7 @@ const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
 const security = require('./lib/security')(app)
+const routes = require('./routes')
 
 // // Uncomment if using Mongo
 // var db = require('./lib/db')
@@ -18,9 +19,7 @@ security.cors(whitelistedOriginDomains, ['Date', 'Location'])
 security.hsts(security.hsts.oneYear, false, false)
 security.disablePoweredByHeader()
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+app.use(routes)
 
 // // Uncomment if using Mongo in order to share the connection
 // db.connect(process.env.MONGODB_URL, function(err) {
