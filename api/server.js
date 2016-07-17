@@ -11,8 +11,8 @@ const security = require('./lib/security')(app)
 const port = process.env.PORT || 3000
 const whitelistedOriginDomains = ['example.com', 'example.org']
 
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(bodyParser.json()) // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 security.cors(whitelistedOriginDomains, ['Date', 'Location'])
 security.hsts(security.hsts.oneYear, false, false)
@@ -29,7 +29,7 @@ app.get('/', function (req, res) {
 //     process.exit(1)
 //   }
 //
-  app.listen(port, function () {
-    console.log('Example app listening on port ' + port + '!')
-  })
+app.listen(port, function () {
+  console.log('Example app listening on port ' + port + '!')
+})
 // })

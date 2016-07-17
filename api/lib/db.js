@@ -25,7 +25,7 @@ exports.close = function(done) {
     state.db.close(function(err, result) {
       state.db = null
       state.mode = null
-      done(err)
+      done(err,result)
     })
   }
 }
