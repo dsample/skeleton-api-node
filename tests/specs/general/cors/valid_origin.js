@@ -23,6 +23,10 @@ describe('CORS', function(){
       expect(response.statusCode).to.equal(204)
     })
 
+    it('responds with an empty body', () => {
+      expect(response.text).to.equal('')
+    })
+
     it('responds with the Access-Control-Allow-Origin header', function() {
       expect(response.headers['access-control-allow-origin']).to.equal('http://x.example.com')
     })
