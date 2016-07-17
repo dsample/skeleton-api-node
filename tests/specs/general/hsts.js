@@ -1,10 +1,12 @@
+'use strict'
+
 const chai = require('chai')
 const supertest = require('supertest')
 const expect = chai.expect
 const api = supertest(process.env.API_BASE_URI || 'http://api:3000')
 
 describe('HSTS', function(){
-  var response
+  let response
 
   before(function(done){
     api.get('/')
