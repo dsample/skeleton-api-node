@@ -12,7 +12,6 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "snyk test && mocha",
     "lint": "eslint ./",
     "watch": "nodemon -L server.js",
     "nsp_protect": "nsp check",
