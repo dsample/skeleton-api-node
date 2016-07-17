@@ -11,4 +11,4 @@ While it is a simple 'hello world' app, I've tried to incorporate good security 
 
 ## Development
 
-* `docker-compose build && docker-compose up`
+To launch the development environment which will restart the service when the code changes and rerun the tests when the tests change, run `docker-compose -f docker-compose.watch.yml up --build`

@@ -1,17 +1,20 @@
-api:
-  extends:
-    file: docker-compose.yml
-    service: api
-  command: [ watch ]
-  ports:
-    - "3000:3000"
-  volumes:
-    - "./api:/app"
+version: '2'
 
-tests:
-  extends:
-    file: docker-compose.yml
-    service: tests
-  command: [ watch ]
-  volumes:
-    - "./tests/specs:/app/specs"
+services:
+  api:
+    extends:
+      file: docker-compose.yml
+      service: api
+    command: [ watch ]
+    ports:
+      - "3000:3000"
+    volumes:
+      - "./api:/app"
+
+  tests:
+    extends:
+      file: docker-compose.yml
+      service: tests
+    command: [ watch ]
+    volumes:
+      - "./tests/specs:/app/specs"

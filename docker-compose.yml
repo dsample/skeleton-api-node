@@ -10,9 +10,5 @@ services:
 
   tests:
     build: ./tests
-    depends_on:
-      - api
-    links:
-      - api
     environment:
       - API_BASE_URI=http://api:3000
