@@ -1,7 +1,7 @@
 'use strict'
 
-const cors = require('./security/cors')
-const hsts = require('./security/hsts')
+const cors = require('./cors')
+const hsts = require('./hsts')
 
 module.exports = function(app) {
   const disablePoweredByHeader = () => {
