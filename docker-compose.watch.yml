@@ -16,5 +16,9 @@ services:
       file: docker-compose.yml
       service: tests
     command: [ watch ]
+    links:
+      - api
+    depends_on:
+      - api
     volumes:
       - "./tests/specs:/app/specs"
