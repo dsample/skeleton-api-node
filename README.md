@@ -1,4 +1,6 @@
 # Skeleton API: Node.js
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdsample%2Fskeleton-api-node.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdsample%2Fskeleton-api-node?ref=badge_shield)
+
 A simple starting point for a production-ready, Docker-based service running Node.js, with API tests in a different container.
 
 While it is a simple 'hello world' app, I've tried to incorporate good security practices in order to give a starting place for a real production service.
@@ -32,3 +34,7 @@ Some useful articles to read:
 * http://blog.terranillius.com/post/docker_testing/
 * https://booker.codes/input-validation-in-express-with-express-validator/
 * http://passportjs.org/docs
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fdsample%2Fskeleton-api-node.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fdsample%2Fskeleton-api-node?ref=badge_large)
